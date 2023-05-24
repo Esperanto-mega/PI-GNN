@@ -61,10 +61,7 @@ parser.add_argument('--lr', default=1e-4,
 args = parser.parse_args()
 args.seed = eval(args.seed)
 
-if machine == 'pc':
-    save_path = '/finetuned/Graphsst2'
-else:
-    save_path = '/home/data/yj/Bnova/finetuned/Graphsst2'
+save_path = '/finetuned/Graphsst2'
 
 os.makedirs(save_path, exist_ok = True)
 
