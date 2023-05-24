@@ -1,9 +1,3 @@
-# In[sys]
-import sys
-cur_path = '/home/data/yj/Bnova'
-if cur_path not in sys.path:
-    sys.path.append(cur_path)
-
 # In[Import]
 import os
 import torch
@@ -26,7 +20,7 @@ else:
     device = torch.device('cpu')
 
 # In[Save path]
-save_path = '/home/data/yj/Bnova/trained/TreeCycles'
+save_path = 'trained/TreeCycles'
 os.makedirs(save_path, exist_ok = True)
 
 # In[Dataset]
