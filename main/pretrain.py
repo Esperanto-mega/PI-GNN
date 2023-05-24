@@ -7,10 +7,6 @@ import argparse
 import os.path as osp
 import numpy as np
 
-cur_path = '/home/data/yj/Bnova'
-if cur_path not in sys.path:
-    sys.path.append(cur_path)
-
 import torch
 import torch_geometric
 import torch.nn.functional as F
@@ -71,7 +67,7 @@ parser.add_argument('--lr', default=4e-3,
 args = parser.parse_args()
 args.seed = eval(args.seed)
 
-save_path = '/home/data/yj/Bnova/trained'
+save_path = 'trained'
 os.makedirs(save_path, exist_ok = True)
 
 # In[Settings]
