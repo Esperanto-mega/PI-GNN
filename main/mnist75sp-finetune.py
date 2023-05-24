@@ -6,11 +6,6 @@ import os.path as osp
 import numpy as np
 
 machine = 'server'
-
-if machine != 'pc':
-    cur_path = '/home/data/yj/Bnova'
-    if cur_path not in sys.path:
-        sys.path.append(cur_path)
         
 import torch
 import torch.nn as nn
@@ -61,12 +56,7 @@ parser.add_argument('--lr', default=1e-3,
                     type=float, help='learning rate for the predictor')
 args = parser.parse_args()
 args.seed = eval(args.seed)
-
-if machine == 'pc':
-    save_path = '/finetuned/Mnist'
-else:
-    save_path = '/home/data/yj/Bnova/finetuned/Mnist'
-
+save_path = '/finetuned/Mnist'
 os.makedirs(save_path, exist_ok = True)
 
 # In[Device]
