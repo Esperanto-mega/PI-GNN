@@ -57,10 +57,7 @@ parser.add_argument('--lr', default=8e-4,
 args = parser.parse_args()
 args.seed = eval(args.seed)
 
-if machine == 'pc':
-    save_path = '/finetuned/BA2Motifs'
-else:
-    save_path = '/home/data/yj/Bnova/finetuned/BA2Motifs'
+save_path = 'finetuned/BA2Motifs'
 
 os.makedirs(save_path, exist_ok = True)
 
