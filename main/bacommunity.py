@@ -1,9 +1,3 @@
-# In[sys]
-import sys
-cur_path = '/home/data/yj/Bnova'
-if cur_path not in sys.path:
-    sys.path.append(cur_path)
-
 # In[Import]
 import os
 import torch
