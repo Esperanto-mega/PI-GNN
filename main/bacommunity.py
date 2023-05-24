@@ -20,7 +20,7 @@ else:
     device = torch.device('cpu')
 
 # In[Save path]
-save_path = '/home/data/yj/Bnova/trained/BACommunity'
+save_path = 'trained/BACommunity'
 os.makedirs(save_path, exist_ok = True)
 
 # In[Dataset]
