@@ -7,12 +7,6 @@ import sys
 import argparse
 import os.path as osp
 import numpy as np
-
-machine = 'server'
-if machine != 'pc':
-    cur_path = '/home/data/yj/Bnova'
-    if cur_path not in sys.path:
-        sys.path.append(cur_path)
         
 import torch
 import torch.nn as nn
@@ -65,10 +59,7 @@ parser.add_argument('--lr', default=1e-3,
 args = parser.parse_args()
 args.seed = eval(args.seed)
 
-if machine == 'pc':
-    save_path = '/finetuned/Molhiv'
-else:
-    save_path = '/home/data/yj/Bnova/finetuned/Molhiv'
+save_path = '/finetuned/Molhiv'
 
 os.makedirs(save_path, exist_ok = True)
 
